@@ -1,0 +1,33 @@
+.card{
+    display:inline-block;
+   position: -ms-page; 
+    border:1px solid red;
+  }
+  
+  
+  .card:before{
+          content:"Welcome";
+    font-size:10em;
+    color:gold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+          width:100%;
+          height:100%;
+          position:absolute;
+          top:0;
+          left:0;
+          background-color:rgba(0, 0, 0, 0.3);
+          opacity:0;
+          visibility:hidden;
+          transform-origin:top center;
+          transform: scale3d(1, 0, 1);
+          transition:.6s;
+      }
+  
+  .card:hover::before{
+      opacity:1;
+      transform: scale3d(1, 1, 1);
+          visibility: visible;
+    
+  }
